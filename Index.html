@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+
+  <style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f172a;
+    color: #e5e7eb;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #020617;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #94a3b8;
+}
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #38bdf8;
+    color: #020617;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.light {
+    background-color: #f8fafc;
+    color: #020617;
+}
+
+.light header,.light .card {
+    background-color: #e5e7eb;
+}
+
+.main-head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.head {
+    flex: 1;
+  text-align: center;
+}
+
+.head-two button {
+  font-size: 1.2rem;
+  height: 30px;
+  border-radius: 15px;
+  padding-top: 2px;
+}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="main-head">
+        <div class="head"> 
+            <h1>Hi, I'm Timileyin👋</h1>
+            <p>Computer Science Student | Aspiring Web Developer</p>
+        </div>
+    
+        <div class="head-two">
+            <button id="themeBtn">☀️</button>
+        </div> 
+    </div>
+   
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>About Me</h2>
+      <p>
+        I am a Computer Science student with an interest in web development.
+        I enjoy learning how websites work and building simple, functional
+        projects using modern web technologies.
+      </p>
+
+      <p id="moreText" style="display: none; margin-top: 10px;">
+        I am currently improving my skills in JavaScript and React,
+        while learning how to use GitHub for version control and project hosting.
+      </p>
+      <button id="moreBtn">Click to know more</button>
+
+    </div>
+
+    <div class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Basic Git & GitHub</li>
+        <li>Beginner React</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Hobbies & Interests</h2>
+      <p>
+        Coding, listening to music, watching anime, learning new tech skills,
+        and personal growth.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Dapsen101. All rights reserved.
+  </footer>
+
+  <script>
+    const moreBtn = document.getElementById("moreBtn");
+    const moreText = document.getElementById("moreText");
+    const themeBtn = document.getElementById("themeBtn");
+    const body = document.body;
+  
+    moreBtn.addEventListener("click", () => {
+      if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+        moreBtn.textContent = "Show less";
+      } else {
+        moreText.style.display = "none";
+        moreBtn.textContent = "Click to know more";
+      }
+    });
+  
+    themeBtn.addEventListener("click", () => {
+      body.classList.toggle("light");
+  
+      if (body.classList.contains("light")) {
+        themeBtn.textContent = "🌙";
+      } else {
+        themeBtn.textContent = "☀️";
+      }
+    });
+  </script>
+
+</body>
+</html>
