@@ -17,4 +17,4 @@ This project was built to practice:
 - Web page structure with HTML
 - Styling with CSS
 - Basic DOM manipulation with JavaScript
-- Hosting a website using GitHub Pages# About-Me
+- Hosting a website using GitHub Pages
